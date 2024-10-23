@@ -4,7 +4,7 @@ from django_mongodb.manager import MongoManager
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField("date published")
+    pub_date = models.DateTimeField("date published", null=True)
     objects = MongoManager()
 
 
